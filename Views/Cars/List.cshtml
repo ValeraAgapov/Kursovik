@@ -1,0 +1,13 @@
+﻿@using WebApplication3.ViewModels
+@model CarsListViewModel
+
+<h1>Все курсы</h1>
+<h3>@Model.currCategory</h3>
+@{ 
+    foreach (var car in Model.allCars){
+        <div>
+            <h2>Курс @car.name</h2>
+            <p>Количество студентов @car.prise</p>
+        </div>
+    }
+}
